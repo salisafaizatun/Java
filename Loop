@@ -1,0 +1,527 @@
+
+package loop01;
+
+import static java.lang.System.out;
+
+/**
+ * file =loop01.java
+ * Increment , decrement 
+ */
+public class Loop01 {
+
+   
+    public static void main(String[] args) {
+       int n=5;
+       out.println("n = "+n);
+       n++;
+       out.println("setelah menggunakan n++, nilai n sekarang adalah "+n);
+       --n;
+       out.println("setelah menggunakan --n, nilai n sekarang adalah "+n+"\n");
+       int A=n++;
+       out.println("kasus: A=n++");
+       out.println("nilai A adalah "+A);
+       out.println("setelah menggunakan n++, nilai n sekarang adalah "+n);
+       out.println("ini artinya");
+       out.println("A = n");
+       out.println("n = n + 1\n");
+       
+       
+       A=++n;
+       out.println("kasus: A=++n");
+       out.println("nilai A adalah "+A);
+       out.println("setelah menggunakan ++n, nilai n sekarang adalah "+n);
+       out.println("ini artinya");
+       out.println("n = n + 1");
+       out.println("A = n");
+       
+    }
+    
+}
+=======================================<< Output >>==============================================\
+n =5
+Setelah menggunakan n++, nilai n sekarang adalah 6
+Setelah menggunakan --n, nilai n sekarang adalah 5
+
+kasus = A=n++
+nilai A adalah 5
+Setelah menggunakan n++, nilai n sekarang adalah 6
+ini artinya
+A = n
+n =n + 1
+
+kasusu A=++n
+nilai A adalah 7
+setelah menggunakan n++, nilai n sekarang adalah 7
+ini artinya
+n = n + 1
+A = n
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+
+package loop02;
+import java.util.Scanner;
+
+/**
+ * file = loop02.java
+ * penggunaan pernyataan for ,while, do while
+ */
+public class Loop02 {
+
+    public static void main(String[] args) {
+        int i,n,total;  
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya suku= ");n=Baca.nextInt();
+        System.out.println("for:");
+        total=0;
+        for(i=1;i<n;i++) {
+            total+=i;//total=total+i
+            System.out.print(i+"+");
+        } 
+        total+=i;
+        System.out.println(i+"="+total+"\n");
+        System.out.println("while:");
+        i=1;total=0;
+        while (i<n){
+            total+=i;//total=total+i
+            System.out.print(i+"+");
+            i++
+        } 
+        total+=i;
+        System.out.println(i+"="+total+"\n");
+        
+        System.out.println("do while:");
+        i=1;total=0;
+        do {
+            total+=i;//total=total+i
+            System.out.print(i+"+");
+            i++
+        } while(i<n) ;  
+        total+=i;
+        System.out.println(i+"="+total+"\n");
+    }
+    
+}
+=======================================<< Output >>==============================================
+Banyaknya suku= 3
+for:
+1+2+3=6
+
+while:
+1+2+3=6
+
+do while:
+1+2+3=6
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+
+
+package loop2a;
+
+/**
+ * file = loop2a.java
+ * penggunaan pernyataan for ,while, do while
+ */
+public class Loop2a {
+
+    public static void main(String[] args) {
+        int i;       
+        System.out.println("for:");
+        for(i=1;i<=10;i++) {
+            if(i<10) System.out.print(i+", ");
+            else System.out.print(i+". ");
+        }      
+        
+        System.out.println("\n\nwhile:");
+        i=1;
+        while (i<=10){
+            System.out.print(i+" ");
+            i++
+        }      
+        
+        
+        System.out.println("\n\ndo while:");
+        i=1;
+        do {
+            System.out.print(i+" ");
+            i++
+        } while(i<=10) ;    
+        System.out.println("\n");
+    }
+    
+}
+=======================================<< Output >>==============================================
+for:
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+while:
+1 2 3 4 5 6 7 8 9 10
+
+do while:
+1 2 3 4 5 6 7 8 9 10
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop2b;
+
+/**
+ *
+ * @author user
+ */
+public class Loop2b {
+
+    
+    public static void main(String[] args) {
+        int i, n=5;
+        System.out.println("for:");
+        
+        for(i=1;i<n;i++) {
+            
+            System.out.print(i+" ");
+        } 
+        
+        System.out.println("\n\nwhile:");
+        i=1;
+        while (i<n){
+            
+            System.out.print(i+" ");
+            i++
+        } 
+        
+        System.out.println("\n\ndo while:");
+        i=1;
+        do {
+            
+            System.out.print(i+" ");
+            i++
+        } while(i<n) ;  
+        System.out.println(" "); 
+    }
+    
+    }
+    
+}
+=======================================<< Output >>==============================================
+for:
+1 2 3 4
+
+while:
+1 2 3 4
+
+do while:
+1 2 3 4
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop2c;
+import java.util.Scanner;
+/**
+ *
+ * @author user
+ */
+public class Loop2c {
+
+    
+    public static void main(String[] args) {
+        int i,n;  
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya suku= ");n=Baca.nextInt();
+        System.out.println("for:");
+         for(i=1;i<n;i++) {
+          
+            System.out.print(i+",");
+        } 
+        
+        System.out.println(i+".");
+    }
+    
+}
+=======================================<< Output >>==============================================
+Banyaknya suku= 3
+for:
+1,2,3
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop2d;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class Loop2d {
+
+   
+    public static void main(String[] args) {
+         int i,n;  
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya suku= ");n=Baca.nextInt();
+        
+         for(i=1;i<n;i=i+2) {
+          
+            System.out.println(i+" adalah bilangan ganjil");
+            System.out.println((i+1)+" adalah bilangan genap");
+        } 
+        if (n%2 !=0)
+       System.out.println(i+" adalah bilangan ganjil");
+    }
+    
+}
+=======================================<< Output >>==============================================
+Banyaknya suku= 5
+1 adalah bilangan 
+2 adalah bilangan genap
+3 adalah bilangan ganjil
+4 adalah bilangan genap
+5 adalah bilangan ganjil
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop3;
+
+
+
+/**
+ * file:loop3.java
+ * loop bersarang
+ */
+public class Loop3 {
+
+    
+    public static void main(String[] args) {
+        int i,j,n=2,m=3;  
+        
+        System.out.println("for:");
+        
+        for(i=1;i<=n;i++) {
+           for(j=1;j<=m;j++) {
+            System.out.println(i+" + "+j+" = "+(i+j));
+           }
+           System.out.println(" ");
+        } 
+        
+        System.out.println("\nwhile:");
+        i=1;
+        while (i<=n){
+            j=1;
+            while(j<=m){
+              System.out.println(i+" + "+j+" = "+(i+j));
+              j++;
+            }
+             System.out.println(" ");
+            i++;
+        } 
+        
+        
+        System.out.println("\ndo while:");
+         i=1;
+        do {
+            j=1;
+            do {
+            System.out.println(i+" + "+j+" = "+(i+j));
+             j++;
+            } while(j<=m) ;
+             System.out.println(" ");
+            i++;
+        } while(i<=n) ;    
+    
+    }
+    
+}
+=======================================<< Output >>==============================================
+for:
+1 + 1 =2
+1 + 2 = 3
+1 + 3 = 4
+
+2 + 1 = 3
+2 + 2 = 4
+2 + 3 = 5
+
+while:
+1 + 1 =2
+1 + 2 = 3
+1 + 3 = 4
+
+2 + 1 = 3
+2 + 2 = 4
+2 + 3 = 5
+
+do while:
+1 + 1 =2
+1 + 2 = 3
+1 + 3 = 4
+
+2 + 1 = 3
+2 + 2 = 4
+2 + 3 = 5
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+ 
+package maks;
+import java.util.*
+ 
+public class Maks {
+
+    
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(System.in);
+        int N,B1,B=-999;
+        System.out.print("Banyaknya data = "); N= Baca.nextInt();
+        
+        for(int i=1;i<=N;i++){
+         System.out.print("Data ke - "+i+"="); B1= Baca.nextInt();  
+         if (B<B1) B=B1;
+        }
+        
+              
+        System.out.println("Bilangan terbesar = "+B);   
+    }
+    
+}
+=======================================<< Output >>==============================================
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop4;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class Loop4 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int n;  
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya data= ");n=Baca.nextInt();
+        if (n>0){
+            
+             int i=1;
+             float x,max,min,total;
+             System.out.print("data ke "+i+" = ");
+             x=Baca.nextInt();
+             max=x; min=x;total =x;
+         for(i=2;i<=n;i++) {
+             System.out.print("data ke "+i+" = ");
+             x=Baca.nextInt();
+             total +=x;
+             if(max<x) max=x;
+                 else if (min>x) min=x;   
+             }
+         float range=max-min;
+         float rata2=total/n;
+         System.out.println(" bilangan terbesar ="+max);
+         System.out.println(" bilangan terkecil ="+min);
+         System.out.println(" Range             ="+range);
+         System.out.println(" Total             ="+total);
+         System.out.println(" rata-rata         ="+rata2);
+         
+         }
+    
+}
+}
+=======================================<< Output >>==============================================
+
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop4a;
+
+import java.util.Scanner;
+
+
+public class Loop4a {
+
+   
+    public static void main(String[] args) {
+      int n;  
+	System.out.println("Data masukan tidak boleh urut")
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya data= ");n=Baca.nextInt();
+        if (n>0){
+            
+             int i=1,j=0,k=0;
+             float x,max=-9999,min=9999,total=0;
+            while(i<=n) {
+             	System.out.print("data ke "+i+" = ");
+             	x=Baca.nextInt();
+             	total +=x;
+             	if(max<x) {max=x;j++;}
+                 else if (min>x){ min=x;k++;}  
+             	i++;
+         
+	     }
+ 	if(i*j !=0){
+       		 float range=max-min;
+	         float rata2=total/n;
+	         System.out.println(" bilangan terbesar ="+max);
+        	 System.out.println(" bilangan terkecil ="+min);
+	         System.out.println(" Range             ="+range);
+        	 System.out.println(" Total             ="+total);
+         	 System.out.println(" rata-rata         ="+rata2);
+         }
+	else System.out.println(" kondisi data terurut);
+        }
+    }
+    
+}
+=======================================<< Output >>==============================================
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+package loop4b;
+
+import java.util.Scanner;
+
+
+public class Loop4b {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int i=0;
+        float x,max=-9999,min=9999,total=0;
+        System.out.print("data ke "+(i+1)+" = ");
+        x=Baca.nextInt();
+        while(x !=9999) {
+            
+             if(max<x) max=x;
+                 else if (min>x) min=x;  
+             total +=x;
+             i++;
+             System.out.print("data ke "+(i+1)+" = ");
+             x=Baca.nextInt();
+        }
+        if (i>0){
+         float range=max-min;
+         float rata2=total/i;
+         System.out.println(" bilangan terbesar ="+max);
+         System.out.println(" bilangan terkecil ="+min);
+         System.out.println(" Range             ="+range);
+         System.out.println(" Total             ="+total);
+         System.out.println(" rata-rata         ="+rata2);
+         
+        }
+    }
+    
+}
+=======================================<< Output >>==============================================
+BUILD SUCCESSFUL (total time: 0 seconds)
+=======================================<< Akhir >>===============================================
+
+
