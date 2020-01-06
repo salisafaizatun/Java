@@ -1,0 +1,166 @@
+/**
+ * File : Sekuensial02.java
+ * Deklarasi variabel
+ * Assigment
+ * @author user
+ */
+import static java.lang.System.out;
+public class Sekuensial02 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int intA;
+        int intB,intC;
+        intA = 10;
+        intB = 20;
+        intC = intA + intB;
+        out.println(intA+" + "+intB+" = "+intC);
+        
+    }
+    
+}
+=================================<<   Output     >>=============================
+10+20=30
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>============================
+/**
+ *File = latihan02.java
+ * menukar 2 bilangan 
+ */
+public class Latihan02 {
+
+    public static void main(String[] args) {
+        
+        int a =5, b=8, c;
+        out.println("Sebelum Ditukar");
+        out.println("a ="+a+" b ="+b);
+        c=a;a=b;b=c;
+        out.println("Sebelum Ditukar");
+        out.println("a ="+a+" b ="+b);
+        
+        
+    }
+    
+}
+=================================<<   Output     >>========================
+sebelum ditukar
+a=5b=8
+sesudah ditukar
+a=8b=5
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>=======================
+
+/**
+ * File = suhu.java
+ * komversi suhu temperatur
+ */
+import java.util.Scanner;
+import static java.lang.System.out;      
+public class Suhu {
+
+    public static void main(String[] args) {
+       
+        Scanner Baca = new Scanner(System.in);
+        float c,r,f,k;
+        System.out.print("Celcius = ");c= Baca.nextFloat();
+        r = 4/5f*c; 
+        f=9/5f*c+32;
+        k=273+c;
+        out.println("Celcius   = "+c);
+        out.println("Reamur    = "+r);
+        out.println("Fahrenhit = "+f);
+        out.println("Kelvin    = "+k);
+    }
+    
+}
+=================================<<   Output     >>========================
+Celcius = 100
+Celcius = 100.0
+Reamur = 80.0
+Fahrenhit = 212.0
+Kelvin = 373.0
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>=======================
+
+import java.util.*
+public class Persegipanjang {
+
+  
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(System.in);
+        int p,l,K,L;
+        System.out.print("Panjang = "); p= Baca.nextInt();
+        System.out.print("Lebar = "); l= Baca.nextInt();
+        L=p*l;K=2*(p+l);
+        System.out.println("Luas   = "+L);
+        System.out.println("Keliling = "+K);
+           
+    }
+    
+}
+=================================<<   Output     >>========================
+Panjang = 15
+Lebar = 5
+Luas = 75
+Keliling = 40
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>=======================
+
+import java.util.*
+
+public class Hambatan1 {
+
+    
+    public static void main(String[] args) {
+       Scanner Baca = new Scanner(System.in);
+        double R1,R2,R3,RS,RP;
+        System.out.print("R1 = "); R1= Baca.nextDouble();
+        System.out.print("R2 = "); R2= Baca.nextDouble();
+        System.out.print("R3 = "); R3= Baca.nextDouble();
+        RS=R1+R2+R3; RP=R1*R2*R3/(R2*R3+R1*R3+R1*R3);
+        System.out.println("RS   = "+RS);
+        System.out.println("RP = "+RP); 
+    }
+    
+}
+=================================<<   Output     >>========================
+R1 = 9
+R2 = 7
+R3 = 5
+RS = 21.0
+RP = 2.52
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>=======================
+import static java.lang.System.out;
+import java.util.Scanner;
+
+/**
+ *File = konversidetik.java
+ * untuk menampilkan jumlah hari , jam, menit  dan detik darimasukan lamanya waktu dalam detik
+ */
+public class KonversiDetik {
+
+   
+    public static void main(String[] args) {
+    int d,H,J,M,D;
+    Scanner Baca = new Scanner(System.in);
+    out.print("Masukkan jumlah detik = ");d=Baca.nextInt();
+    D=d;
+    H=D/86400; D=D%86400;
+    J=D/3600; D=D%3600;
+    M=D/60; D=D%60;
+    out.print(d+" detik = ");
+    out.print(H+" hari + ");
+    out.print(J+" jam + ");
+    out.print(M+" menit + ");
+    out.println(D+" detik.");
+    }
+    
+}
+=================================<<   Output     >>========================
+Masukkan jumlah detik = 35
+35 detik = 0 hari + 0 jam + 0 menit +35 detik
+BUILD SUCCESSFUL (total time : 0 seconds)
+=================================<< Batas Program >>=======================
