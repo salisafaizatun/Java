@@ -1,0 +1,738 @@
+import static java.lang.System.out;
+/**
+ *File = seleksi.java
+ *operator ralsional dan operator logika
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        int intA=10 , intB=20;
+         out.println("Operator Relasional ");
+         out.println("===================\n");
+         out.println("intA = 10 dan  intB = 20");
+         out.println("1. intA == intB bernilai "+ (intA == intB));
+         out.println("2. intA != intB bernilai "+ (intA != intB));
+         out.println("3. intA > intB bernilai "+ (intA > intB));
+         out.println("4. intA < intB bernilai "+ (intA < intB));
+         out.println("5. intA >= intB bernilai "+ (intA >= intB));
+         out.println("6. intA <= intB bernilai "+ (intA <= intB));
+         
+         out.println("\n\nOperator Logika ");
+         out.println("===================\n");
+         out.println("1. true || true bernilai "+ (true || true));
+         out.println("2. true || false bernilai "+ (true || false));
+         out.println("3. false || true bernilai "+ (false || true));
+         out.println("4. false || false bernilai "+ (false || false));
+         out.println("5. true && true bernilai "+ (true && true));
+         out.println("6. true && false bernilai "+ (true && false));
+         out.println("7. false && true bernilai "+ (false && true));
+         out.println("8. false && false bernilai "+ (false && false));
+         out.println("9. !true bernilai "+ (!true));
+         out.println("10.!false  bernilai "+ (!false));
+    } 
+}
+===============================<<    Output     >>=================================
+run:
+Operator Relasional 
+===================
+
+intA = 10 dan  intB = 20
+1. intA == intB bernilai false
+2. intA != intB bernilai true
+3. intA > intB bernilai false
+4. intA < intB bernilai true
+5. intA >= intB bernilai false
+6. intA <= intB bernilai true
+
+
+Operator Logika 
+===================
+
+1. true || true bernilai true
+2. true || false bernilai true
+3. false || true bernilai true
+4. false || false bernilai false
+5. true && true bernilai true
+6. true && false bernilai false
+7. false && true bernilai false
+8. false && false bernilai false
+9. !true bernilai false
+10.!false  bernilai true
+BUILD SUCCESSFUL (total time: 0 seconds)
+===============================<< Batas Program >>=================================
+
+
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * komplemen
+ */
+public class Seleksi {
+
+  
+    public static void main(String[] args) {
+        int intA=10 , intB=20;
+         out.println("Operator Relasional ");
+         out.println("===================\n");
+         out.println("intA = 10 dan  intB = 20");
+         out.print("1. !(intA == intB) bernilai "+ (!(intA == intB))); 
+         out.print(" ekuivalen ");
+         out.println(" intA != intB bernilai "+ (intA != intB));
+         out.print("2. !(intA != intB) bernilai "+ (!(intA != intB))); 
+         out.print(" ekuivalen ");
+         out.println(" intA == intB bernilai "+ (intA == intB));
+         out.print("3. !(intA > intB) bernilai "+ (!(intA > intB)));
+         out.print(" ekuivalen ");
+         out.println(" intA <= intB bernilai "+ (intA <= intB));
+         out.print("4. !(intA <= intB) bernilai "+ (!(intA <= intB)));
+         out.print(" ekuivalen ");
+         out.print(" intA > intB bernilai "+ (intA > intB));
+         
+         out.println("\n\nOperator Logika ");
+         out.println("===================\n");
+         out.print("1. !(true || false) bernilai "+ (!(true || false)));
+         out.print(" ekuivalen ");
+         out.println(" false && true bernilai "+ (false && true));
+         out.print("2. !(true && false) bernilai "+ (!(true && false)));
+         out.print(" ekuivalen ");
+         out.println(" false || true bernilai "+ (false || true));
+         
+                  
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Operator Relasional 
+===================
+
+intA = 10 dan  intB = 20
+1. !(intA == intB) bernilai true ekuivalen  intA != intB bernilai true
+2. !(intA != intB) bernilai false ekuivalen  intA == intB bernilai false
+3. !(intA > intB) bernilai true ekuivalen  intA <= intB bernilai true
+4. !(intA <= intB) bernilai false ekuivalen  intA > intB bernilai false
+
+Operator Logika 
+===================
+
+1. !(true || false) bernilai false ekuivalen  false && true bernilai false
+2. !(true && false) bernilai true ekuivalen  false || true bernilai true
+BUILD SUCCESSFUL (total time: 1 second)
+===============================<< Batas Program >>=================================
+
+
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * komplemen
+ */
+public class Seleksi {
+
+  
+    public static void main(String[] args) {
+        int intA=10 , intB=20;
+         out.println("Operator Relasional ");
+         out.println("===================\n");
+         out.println("intA = 10 dan  intB = 20");
+         out.print("1. !(intA == intB) bernilai "+ (!(intA == intB))); 
+         out.print(" ekuivalen ");
+         out.println(" intA != intB bernilai "+ (intA != intB));
+         out.print("2. !(intA != intB) bernilai "+ (!(intA != intB))); 
+         out.print(" ekuivalen ");
+         out.println(" intA == intB bernilai "+ (intA == intB));
+         out.print("3. !(intA > intB) bernilai "+ (!(intA > intB)));
+         out.print(" ekuivalen ");
+         out.println(" intA <= intB bernilai "+ (intA <= intB));
+         out.print("4. !(intA <= intB) bernilai "+ (!(intA <= intB)));
+         out.print(" ekuivalen ");
+         out.print(" intA > intB bernilai "+ (intA > intB));
+         
+         out.println("\n\nOperator Logika ");
+         out.println("===================\n");
+         out.print("1. !(true || false) bernilai "+ (!(true || false)));
+         out.print(" ekuivalen ");
+         out.println(" false && true bernilai "+ (false && true));
+         out.print("2. !(true && false) bernilai "+ (!(true && false)));
+         out.print(" ekuivalen ");
+         out.println(" false || true bernilai "+ (false || true));
+         
+         out.print("3. !(intA<intB || intA==intB) bernilai "+ (!((intA<intB)||(intA==intB)))); 
+         out.print(" ekuivalen ");
+         out.println(" intA>=intB && intA != intB) bernilai "+ ((intA>=intB)&&(intA != intB)));
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Operator Relasional 
+===================
+
+intA = 10 dan  intB = 20
+1. !(intA == intB) bernilai true ekuivalen  intA != intB bernilai true
+2. !(intA != intB) bernilai false ekuivalen  intA == intB bernilai false
+3. !(intA > intB) bernilai true ekuivalen  intA <= intB bernilai true
+4. !(intA <= intB) bernilai false ekuivalen  intA > intB bernilai false
+
+Operator Logika 
+===================
+
+1. !(true || false) bernilai false ekuivalen  false && true bernilai false
+2. !(true && false) bernilai true ekuivalen  false || true bernilai true
+3. !(intA<intB || intA==intB) bernilai false ekuivalen  intA>=intB && intA != intB) bernilai false
+BUILD SUCCESSFUL (total time: 0 seconds)
+===============================<< Batas Program >>=================================
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File : Seleksi
+ * mencetak bilangan terbesar dari 2 buah bilangan
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(in);
+        int B1,B2;
+        out.print("Bilangan pertama = "); B1= Baca.nextInt();
+        out.print("Bilangan kedua   = "); B2= Baca.nextInt();
+        out.print("\nBilangan terbesar dari "+B1+" dan "+B2+" adalah ");
+        if (B1>B2) System.out.println(B1);
+        else System.out.println(B2);
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Bilangan pertama = 3
+Bilangan kedua   = 5
+
+Bilangan terbesar dari 3 dan 5 adalah 5
+BUILD SUCCESSFUL (total time: 5 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File : Seleksi
+ * mencetak bilangan terbesar dari 2 buah bilangan
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+         Scanner Baca = new Scanner(in);
+        int B1,B2;
+        out.print("Bilangan pertama = "); B1= Baca.nextInt();
+        out.print("Bilangan kedua   = "); B2= Baca.nextInt();
+        out.println("\nBilangan terbesar dari "+B1+" dan "+B2+" adalah "+(B1>B2? B1:B2));
+        
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Bilangan pertama = 3
+Bilangan kedua   = 4
+
+Bilangan terbesar dari 3 dan 4 adalah 4
+BUILD SUCCESSFUL (total time: 3 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * mencetak bilangan terbesar dari 3 buah bilangan
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(in);
+        int B1,B2,B3;
+        out.print("Bilangan pertama = "); B1= Baca.nextInt();
+        out.print("Bilangan kedua   = "); B2= Baca.nextInt();
+        out.print("Bilangan kedia   = "); B3= Baca.nextInt();
+        out.print("\nBilangan terbesar dari "+B1+" , "+B2+" dan "+B3+" adalah ");
+        if (B1>B2) 
+            if(B1>B3)out.println(B1);
+            else out.println(B3);
+        else
+            if(B2>B3) out.println(B2);
+            else  out.println(B3);  
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Bilangan pertama = 5
+Bilangan kedua   = 7
+Bilangan kedia   = 6
+
+Bilangan terbesar dari 5 , 7 dan 6 adalah 7
+BUILD SUCCESSFUL (total time: 7 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * mencetak bilangan terbesar dari 5 buah bilangan
+ * menggunakan tambahan 1 variabel bantu
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(in);
+        int B1,B2,B3,B4,B5,B;
+        out.print("B1 = "); B1= Baca.nextInt();
+        out.print("B2 = "); B2= Baca.nextInt();
+        out.print("B3 = "); B3= Baca.nextInt();
+        out.print("B4 = "); B4= Baca.nextInt();
+        out.print("B5 = "); B5= Baca.nextInt();
+        
+        B=B1;
+        
+        out.print("Bilangan terbesar = ");
+        if (B<B2) B=B2;
+        if (B<B3) B=B3;
+        if (B<B4) B=B4;
+        if (B<B5) B=B5;
+        
+        out.println(B);
+    }
+    
+}
+
+===============================<<    Output     >>=================================
+run:
+B1 = 4
+B2 = 3
+B3 = 5
+B4 = 7
+B5 = 6
+Bilangan terbesar = 7
+BUILD SUCCESSFUL (total time: 8 seconds)
+
+===============================<< Batas Program >>=================================
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * mencetak bilangan terbesar dan terkecil dari 5 buah bilangan
+ * menggunakan tambahan 1 variabel bantu
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(in);
+        int B1,B2,B3,B4,B5,B;
+        out.print("B1 = "); B1= Baca.nextInt();
+        out.print("B2 = "); B2= Baca.nextInt();
+        out.print("B3 = "); B3= Baca.nextInt();
+        out.print("B4 = "); B4= Baca.nextInt();
+        out.print("B5 = "); B5= Baca.nextInt();
+        
+        B=B1;
+     
+        if (B<B2) B=B2;
+        if (B<B3) B=B3;
+        if (B<B4) B=B4;
+        if (B<B5) B=B5;
+        
+        out.println("Bilangan terbesar = "+B);
+        
+         B=B1;
+     
+        if (B>B2) B=B2;
+        if (B>B3) B=B3;
+        if (B>B4) B=B4;
+        if (B>B5) B=B5;
+        
+        out.println("Bilangan terkecil = "+B);
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+B1 = 3
+B2 = 2
+B3 = 5
+B4 = 4
+B5 = 6
+Bilangan terbesar = 6
+Bilangan terkecil = 2
+BUILD SUCCESSFUL (total time: 19 seconds)
+===============================<< Batas Program >>=================================
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * mencetak bilangan terbesar dan terkecil dari 5 buah bilangan
+ * menggunakan tambahan 2 variabel bantu
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(in);
+        int B1,B2,B3,B4,B5,BB,BK;
+        out.print("B1 = "); B1= Baca.nextInt();
+        out.print("B2 = "); B2= Baca.nextInt();
+        out.print("B3 = "); B3= Baca.nextInt();
+        out.print("B4 = "); B4= Baca.nextInt();
+        out.print("B5 = "); B5= Baca.nextInt();
+        
+        BB=B1;BK=B1;
+     
+        if (BB<B2) BB=B2;
+        else if (BK>B2) BK=B2;
+        
+        if (BB<B3) BB=B3;
+        else if (BK>B3) BK=B3;
+        
+        if (BB<B4) BB=B4;
+        else if (BK>B4) BK=B4;
+        
+        if (BB<B5) BB=B5;
+        else if (BK>B5) BK=B5;
+        
+        out.println("Bilangan terbesar = "+BB);
+        out.println("Bilangan terkecil = "+BK);
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+B1 = 3
+B2 = 2
+B3 = 4
+B4 = 5
+B5 = 1
+Bilangan terbesar = 5
+Bilangan terkecil = 1
+BUILD SUCCESSFUL (total time: 9 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * Baca 2 bilangan bulat yaitu intA dan intB
+ * hitung intA/intB dan cetak hasilnya,jika intB<>0
+ * jika tidak,cetak pesan bernilai tidak berhingga ,untuk intA<>0
+ * atau cetak pesan tidak terdefinisi ,untuk intA = intB =0
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(System.in);
+        int intA,intB;
+        out.print("Pembilang = "); intA= Baca.nextInt();
+        out.print("Penyebut  = "); intB= Baca.nextInt();
+        
+        out.print(intA+"/"+intB+" = "));
+        if (intB !=0) out.println(intA/intB);
+        else if (intA != 0) out.println("tak berhingga");
+        else out.println("tidak terdefinisi");
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+Pembilang = 6
+Penyebut  = 3
+6/3 = 2
+BUILD SUCCESSFUL (total time: 7 seconds
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<=20
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 atau x>20   
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if ((x<0) ||(x>20)) f=0;
+        else f=5;       // 0<=x<=20
+    
+        out.println("f("+x+") = "+f) 
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+x = 7
+f(7) = 5
+BUILD SUCCESSFUL (total time: 6 seconds)
+
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<=20
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 atau x>20   
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if ((x>=0) && (x<=20)) f=5;
+        else f=0;       // x<0 atau x>20
+    
+        out.println("f("+x+") = "+f) 
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+x = 5
+f(5) = 5
+BUILD SUCCESSFUL (total time: 4 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<=20
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 atau x>20   
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if (x<0) f=0;
+        else if (x>20) f=0;
+        else f=5;       // 0<=x<=20
+    
+        out.println("f("+x+") = "+f) 
+    }
+    
+}
+===============================<<    Output     >>=================================
+run:
+x = 9
+f(9) = 5
+BUILD SUCCESSFUL (total time: 5 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<=20
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 atau x>20   
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if (x>=0)
+            if (x<=20) f=5;
+            else f=0; // x>20
+        else f=0;// x<0
+       
+        out.println("f("+x+") = "+f) 
+    }
+    
+}
+===============================<<    Output     >>=================================
+ run:
+x = 9
+f(9) = 5
+BUILD SUCCESSFUL (total time: 4 seconds)
+===============================<< Batas Program >>=================================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<10
+ * cetak nilai fungsi f(x) = 3 ; untuk 10<=x<25
+ * cetak nilai fungsi f(x) = 6 ; untuk 25<=x<50
+ * cetak nilai fungsi f(x) = 7 ; untuk x>=50 
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if (x<0) f=0;
+        else if ((x>=0)&& (x<10)) f=5;
+        else if ((x>=10)&& (x<25)) f=3;
+        else if ((x>=25)&& (x<50)) f=6;
+        else  f=7;  // x>=50
+
+        out.println("f("+x+") = "+f) 
+    }
+  
+    
+}
+===============================<<    Output     >>=================================
+run:
+x = 9
+f(9) = 5
+BUILD SUCCESSFUL (total time: 3 seconds)
+
+===============================<< Batas Program >>=================================
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * file =seleksi.java
+ * cari akar akar persamaan kuadrat Ax^2+Bx+c=0 dan cetak hasilnya;
+ */
+public class Seleksi {
+
+    
+    public static void main(String[] args) {
+    
+        Scanner Baca = new Scanner(System.in);  
+        double A,B,C;
+        
+        out.print("A = "); A= Baca.nextInt();
+        out.print("B = "); B= Baca.nextInt();
+        out.print("C = "); C= Baca.nextInt();
+        
+        if(A==0)
+            if(B==0)
+                if(C==0) out.println("Solusi banyaknya tak berhingga");
+                else out.println("tidak memiliki jawaban");
+            else {
+                  double x= -C/B;
+                  out.println("X = "+x);
+            }
+        else { //  A <>0
+            double D=B*B-4*A*C;
+            if(D<0){
+                double xr =-B/(2*A); 
+                double xim = Math.sqrt(-D)/2/A;
+                out.println("X1 = "+xr+" + "+xim+"i");
+                out.println("X2 = "+xr+" - "+xim+"i");
+            }
+            else if(D==0){
+                double x=-B/2/A;
+                out.println("X1=X2= "+x);
+            } 
+            else { //D>0
+                double x1 = (-B+Math.sqrt(D))/2/A;
+                double x2 = (-B-Math.sqrt(D))/2/A;
+                out.println("X1 = "+x1);
+                out.println("X2 = "+x2);
+                
+            }
+            
+            }
+        
+    }
+    
+}
+
+===============================<< Batas Program >>============================
+run:
+A = 5
+B = 7
+C = 9
+X1 = -0.7 + 1.1445523142259597i
+X2 = -0.7 - 1.1445523142259597i
+BUILD SUCCESSFUL (total time: 7 seconds)
+
+===============================<< Batas Program >>============================
+
+
+import java.util.Scanner;
+import static java.lang.System.in;
+import static java.lang.System.out;
+
+/**
+ * File = seleksi.java
+ * cetak nilai fungsi f(x) = 0 ; untuk x<0 
+ * cetak nilai fungsi f(x) = 5 ; untuk 0<=x<10
+ * cetak nilai fungsi f(x) = 3 ; untuk 10<=x<25
+ * cetak nilai fungsi f(x) = 6 ; untuk 25<=x<50
+ * cetak nilai fungsi f(x) = 7 ; untuk x>=50 
+ */
+public class Seleksi {
+
+    public static void main(String[] args) {
+      
+        Scanner Baca = new Scanner(System.in);
+        int x,f;
+        out.print("x = "); x= Baca.nextInt();
+        if (x<0) f=0;
+        else if (x<10) f=5; // 0<=x<10
+        else if (x<25) f=3; // 10<=x<25
+        else if (x<50) f=6;  // 25<=x<50
+        else  f=7;  // x>=50
+
+        out.println("f("+x+") = "+f) 
+    }
+  
+    
+}
+===============================<<    Output     >>=================================
+run:
+x = 5
+f(5) = 5
+BUILD SUCCESSFUL (total time: 3 seconds)
+
+===============================<< Batas Program >>=================================
+
