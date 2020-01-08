@@ -1,13 +1,13 @@
 
-package loop01;
+package loop;
 
 import static java.lang.System.out;
 
 /**
- * file =loop01.java
+ * file =loop.java
  * Increment , decrement 
  */
-public class Loop01 {
+public class Loop {
 
    
     public static void main(String[] args) {
@@ -59,14 +59,14 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
 
-package loop02;
+package loop;
 import java.util.Scanner;
 
 /**
- * file = loop02.java
+ * file = loop.java
  * penggunaan pernyataan for ,while, do while
  */
-public class Loop02 {
+public class Loop {
 
     public static void main(String[] args) {
         int i,n,total;  
@@ -118,13 +118,13 @@ BUILD SUCCESSFUL (total time: 0 seconds)
 
 
 
-package loop2a;
+package loop;
 
 /**
- * file = loop2a.java
+ * file = loop.java
  * penggunaan pernyataan for ,while, do while
  */
-public class Loop2a {
+public class Loop {
 
     public static void main(String[] args) {
         int i;       
@@ -165,13 +165,13 @@ do while:
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop2b;
+package loop;
 
 /**
  *
  * @author user
  */
-public class Loop2b {
+public class Loop {
 
     
     public static void main(String[] args) {
@@ -217,13 +217,13 @@ do while:
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop2c;
+package loop;
 import java.util.Scanner;
 /**
  *
  * @author user
  */
-public class Loop2c {
+public class Loop {
 
     
     public static void main(String[] args) {
@@ -248,7 +248,7 @@ for:
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop2d;
+package loop;
 
 import java.util.Scanner;
 
@@ -256,7 +256,7 @@ import java.util.Scanner;
  *
  * @author user
  */
-public class Loop2d {
+public class Loop {
 
    
     public static void main(String[] args) {
@@ -285,15 +285,15 @@ Banyaknya suku= 5
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop3;
+package loop;
 
 
 
 /**
- * file:loop3.java
+ * file:loop.java
  * loop bersarang
  */
-public class Loop3 {
+public class Loop {
 
     
     public static void main(String[] args) {
@@ -392,7 +392,7 @@ public class Maks {
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop4;
+package loop;
 
 import java.util.Scanner;
 
@@ -400,7 +400,7 @@ import java.util.Scanner;
  *
  * @author user
  */
-public class Loop4 {
+public class Loop {
 
     /**
      * @param args the command line arguments
@@ -440,12 +440,12 @@ public class Loop4 {
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop4a;
+package loop;
 
 import java.util.Scanner;
 
 
-public class Loop4a {
+public class Loop {
 
    
     public static void main(String[] args) {
@@ -484,12 +484,12 @@ public class Loop4a {
 BUILD SUCCESSFUL (total time: 0 seconds)
 =======================================<< Akhir >>===============================================
 
-package loop4b;
+package loop;
 
 import java.util.Scanner;
 
 
-public class Loop4b {
+public class Loop {
 
     public static void main(String[] args) {
       
