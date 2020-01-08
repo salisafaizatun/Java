@@ -1,0 +1,328 @@
+
+package array01;
+
+import java.util.Scanner;
+
+/**
+ *Menghitung standart deviasi
+ * @author user
+ */
+public class Array01 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int n;
+        float[] x;
+        float total=0;
+      
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya data= ");n=Baca.nextInt();
+        x = new float[n];
+        for (int i=0;i<n;i++){
+            System.out.print("data ke "+(i+1)+" = ");
+             x[i]=Baca.nextInt();
+             total +=x[i];
+        }
+        float xr=total/n;
+        total=0;
+        for (int i=0;i<n;i++)
+             total +=(x[i]-xr)*(x[i]-xr);
+        float sd =(float) Math.sqrt(total)/n;
+        
+        System.out.println("Standart deviasi ="+sd);
+    }
+    
+}
+==============================< Output >=============================
+run:
+Banyaknya data= 5
+data ke 1 = 3
+data ke 2 = 4
+data ke 3 = 2
+data ke 4 = 5
+data ke 5 = 6
+Standart deviasi =0.6324555
+BUILD SUCCESSFUL (total time: 14 seconds)
+==============================<<>>===================================
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package array02;
+
+import java.util.Scanner;
+
+/**
+ * Mengurutkan data dengan metoda Selection Sort
+ * @author user
+ */
+public class Array02 {
+
+   
+    public static void main(String[] args) {
+        int n,adr;
+        float[] x;
+        float min,temp;
+      
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Banyaknya data= ");n=Baca.nextInt();
+        x = new float[n];
+        for (int i=0;i<n;i++){
+            System.out.print("data ke "+(i+1)+" = ");
+             x[i]=Baca.nextInt();
+            
+        }
+        System.out.println("\nData sebelum diurut :");
+        for(int i=0;i<n;i++) System.out.print(x[i]+" ");
+        System.out.println(" ");
+        for (int i=0;i<(n-1);i++){
+            min=x[i];adr=i;
+            for(int j=i+1;j<n;j++)
+                 if (min>x[j]){ min=x[j];adr=j;}
+            temp=x[i];x[i]=x[adr];x[adr]=temp;
+            
+        }
+        System.out.println("\nData sesudah diurut :");
+        for(int i=0;i<n;i++) System.out.print(x[i]+" ");
+        System.out.println(" "); 
+    }
+    
+}
+==============================< Output >=============================
+run:
+Banyaknya data= 5
+data ke 1 = 2
+data ke 2 = 4
+data ke 3 = 6
+data ke 4 = 4
+data ke 5 = 8
+
+Data sebelum diurut :
+2.0 4.0 6.0 4.0 8.0  
+
+Data sesudah diurut :
+2.0 4.0 4.0 6.0 8.0  
+BUILD SUCCESSFUL (total time: 9 seconds)
+==============================<<>>===================================
+
+package array03;
+
+import java.util.Scanner;
+
+/**
+ *Penjumlahan 2 buah matriks
+ * @author user
+ */
+public class Array03 {
+
+    public static void main(String[] args) {
+       int row,col;
+        int[][] A;
+        int[][] B;
+        int[][] C;
+      
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Ordo baris= ");row=Baca.nextInt();
+        System.out.print("Ordo kolom= ");col=Baca.nextInt();
+        A = new int[row][col];
+        B = new int[row][col];
+        C = new int[row][col];
+        
+        System.out.println("Baca Matriks A =");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+              System.out.print("A("+i+","+j+")= ");
+               A[i][j]=Baca.nextInt();  
+            }
+                
+        }
+        
+        System.out.println("\n\nBaca Matriks B =");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+              System.out.print("B("+i+","+j+")= ");
+               B[i][j]=Baca.nextInt();  
+            }
+                
+        }
+        
+        System.out.println("\nC=A+B");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+            
+               C[i][j]=A[i][j]+B[i][j];  
+            }
+                
+        }
+       System.out.println("\nMatriks  A:");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+            
+               System.out.print(A[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+        System.out.println("\nMatriks  B:");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+            
+               System.out.print(B[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+        
+        System.out.println("\nMatriks  C:");
+        for (int i=0;i<row;i++){
+            for(int j=0;j<col;j++){
+            
+               System.out.print(C[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+    }
+    
+}
+==============================< Output >=============================
+run:
+Ordo baris= 3
+Ordo kolom= 3
+Baca Matriks A =
+A(0,0)= 2
+A(0,1)= 2
+A(0,2)= 2
+A(1,0)= 2
+A(1,1)= 2
+A(1,2)= 2
+A(2,0)= 2
+A(2,1)= 2
+A(2,2)= 2
+
+
+Baca Matriks B =
+B(0,0)= 5
+B(0,1)= 5
+B(0,2)= 5
+B(1,0)= 5
+B(1,1)= 5
+B(1,2)= 5
+B(2,0)= 5
+B(2,1)= 5
+B(2,2)= 5
+
+C=A+B
+
+Matriks  A:
+2 2 2  
+2 2 2  
+2 2 2  
+
+Matriks  B:
+5 5 5  
+5 5 5  
+5 5 5  
+
+Matriks  C:
+7 7 7  
+7 7 7  
+7 7 7  
+BUILD SUCCESSFUL (total time: 28 seconds)
+==============================<<>>===================================
+package array04;
+
+import java.util.Scanner;
+
+/**
+ *Perkalian Matriks
+ * @author user
+ */
+public class Array04 {
+
+   
+    public static void main(String[] args) {
+         int row1,col1,row2,col2;
+        int[][] A;
+        int[][] B;
+        int[][] C;
+      
+        Scanner Baca = new Scanner(System.in);
+        System.out.print("Ordo baris Matriks Pertama = ");row1=Baca.nextInt();
+        System.out.print("Ordo kolom Matriks Pertama = ");col1=Baca.nextInt();
+        System.out.print("Ordo baris Matriks Kedua   = ");row2=Baca.nextInt();
+        System.out.print("Ordo kolom Matriks Kedua   = ");col2=Baca.nextInt();
+        
+        if(col1==row2){
+        A = new int[row1][col1];
+        B = new int[row2][col2];
+        C = new int[row1][col2];
+        
+        System.out.println("Baca Matriks A =");
+        for (int i=0;i<row1;i++){
+            for(int j=0;j<col1;j++){
+              System.out.print("A("+i+","+j+")= ");
+               A[i][j]=Baca.nextInt();  
+            }
+                
+        }
+        
+        System.out.println("\n\nBaca Matriks B =");
+        for (int i=0;i<row2;i++){
+            for(int j=0;j<col2;j++){
+              System.out.print("B("+i+","+j+")= ");
+               B[i][j]=Baca.nextInt();  
+            }
+                
+        }
+        
+        System.out.println("\nC=A*B");
+        for (int i=0;i<row1;i++){
+            for(int j=0;j<col2;j++){
+               C[i][j]=0;
+               for(int k=0;k<col1;k++)
+               C[i][j]+=A[i][k]*B[k][j];  
+            }
+                
+        }
+       System.out.println("\nMatriks  A:");
+        for (int i=0;i<row1;i++){
+            for(int j=0;j<col1;j++){
+            
+               System.out.print(A[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+        System.out.println("\nMatriks  B:");
+        for (int i=0;i<row2;i++){
+            for(int j=0;j<col2;j++){
+            
+               System.out.print(B[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+        
+        System.out.println("\nMatriks  C:");
+        for (int i=0;i<row1;i++){
+            for(int j=0;j<col2;j++){
+            
+               System.out.print(C[i][j]+" ");  
+            }
+          System.out.println(" ");       
+        }
+        }
+        else 
+            System.out.println("Ordo kolom matriks pertama tidak sama dengan ordo baris matriks kedua");
+    }
+    
+}
+==============================< Output >=============================
+run:
+Ordo baris Matriks Pertama = 3
+Ordo kolom Matriks Pertama = 3
+Ordo baris Matriks Kedua   = 2
+Ordo kolom Matriks Kedua   = 2
+Ordo kolom matriks pertama tidak sama dengan ordo baris matriks kedua
+BUILD SUCCESSFUL (total time: 38 seconds)
+
+==================================<<>>===============================
