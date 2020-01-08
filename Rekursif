@@ -1,0 +1,304 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rekursif;
+
+
+public class rekursif {
+
+    public static int a,b;
+    public static void init(){
+        a=0;b=0;
+    }
+    public static int tambah(){
+        return(a+b);
+    }
+    public static int kurang(){
+        return(a-b);
+    }
+    public static void cetak(int n){
+        System.out.println(n);
+    }
+    public static void main(String[] args) {
+       init();
+       System.out.println("a = "+a);
+       System.out.println("b = "+b);
+       a=5;b=7;
+       System.out.println(tambah());
+       System.out.println(kurang());
+       cetak(5);
+       cetak((3+tambah()));
+       cetak(kurang());
+    }
+    
+}
+================================================<<Output>>========================================================
+run:
+a = 0
+b = 0
+12
+-2
+5
+15
+-2
+BUILD SUCCESSFUL (total time: 0 seconds)
+====================================<<------>>======================================================================
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rekursif;
+
+import java.util.Scanner;
+
+
+public class rekursif {
+
+    public static double reamur(double X){
+        return (4/5.0*X);
+    }
+    public static double fahrenhit(double X){
+        return (9/5.0*X+32);
+    }
+     public static double kelvin(double X){
+        return (273+X);
+    }
+     public static void cetak(String s, double X ){
+         System.out.println(s+" = "+X);
+     }
+    public static void main(String[] args) {
+       Scanner Baca = new Scanner(System.in);
+        int C;
+        System.out.print("Celcius = "); C=Baca.nextInt(); 
+        cetak("celcius",C);
+        cetak("reamur",reamur(C));
+        cetak("fahrenhit",fahrenhit(C));
+        cetak("kelvin",kelvin(C));
+
+    }
+    
+}
+================================================<<Output>>========================================================
+run:
+Celcius = 80
+celcius = 80.0
+reamur = 64.0
+fahrenhit = 176.0
+kelvin = 353.0
+BUILD SUCCESSFUL (total time: 6 seconds)
+====================================<<------>>======================================================================
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rekursif;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class rekursif {
+
+     public static void reamur(double X){
+        System.out.println("Reamur = "+ (4/5.0*X));
+    }
+    public static void fahrenhit(double X){
+       System.out.println("fahrenhit = "+ (9/5.0*X+32));
+    }
+     public static void kelvin(double X){
+        System.out.println("kelvin = "+ (273+X));
+    }
+     
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(System.in);
+        int C;
+        System.out.print("Celcius = "); C=Baca.nextInt(); 
+        
+        reamur(C);
+        fahrenhit(C);
+        kelvin(C);
+    }
+    
+}
+================================================<<Output>>========================================================
+run:
+Celcius = 90
+Reamur = 72.0
+fahrenhit = 194.0
+kelvin = 363.0
+BUILD SUCCESSFUL (total time: 5 seconds)
+
+====================================<<------>>======================================================================
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package rekursif;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author user
+ */
+public class rekursif {
+public static double Keliling(double x,double y){
+    return(2*(x+y));
+}
+ 
+public static double Luas(double x,double y){
+    return(x*y);
+}
+    public static void main(String[] args) {
+        Scanner Baca = new Scanner(System.in);
+        double pjg,lbr;
+        System.out.print("Panjang = "); pjg=Baca.nextDouble(); 
+        System.out.print("Lebar   = "); lbr=Baca.nextDouble();
+        System.out.println("Keliling = "+Keliling(pjg,lbr));
+        System.out.println("Luas = "+Luas(pjg,lbr));
+    }
+    
+}
+================================================<<Output>>========================================================
+run:
+Panjang = 7
+Lebar   = 5
+Keliling = 24.0
+Luas = 35.0
+BUILD SUCCESSFUL (total time: 7 seconds)
+====================================<<------>>======================================================================
+public class rekursif {
+
+    public static int deret(int n){
+        if(n>0)
+            return(deret(n-1)+n);
+        else
+            return(0);
+    }
+    public static int deret1(int a,int b,int n){
+        if(n>0)
+            return(deret1(a,b,n-1)+a+(n-1)*b);
+        else
+            return(0);
+    }
+        
+    public static int fak(int n){
+        if(n>0)
+            return(n*fak(n-1));
+        else
+            return(1);
+    }
+    public static int pangkat(int a,int n){
+        if(n>0)
+            return(a*pangkat(a,n-1));
+        else
+            return(1);
+    }
+    public static int fibo(int n){
+        if(n>2)
+            return(fibo(n-1)+fibo(n-2));
+        else
+            return(1);
+    }
+    public static int GCD(int a,int b){       
+        if(b!=0) return GCD(b,a%b);
+        else return (a);
+            
+    }
+    public static void main(String[] args) {
+        System.out.println(deret(3));
+        System.out.println(deret1(2,3,5));
+        System.out.println(fak(4));
+        System.out.println(pangkat(5,3));
+        System.out.println(fibo(5));
+        System.out.println(GCD(45,10));
+        System.out.println(GCD(10,45));
+    }
+    
+}
+================================================<<Output>>========================================================
+run:
+6
+40
+24
+125
+5
+5
+5
+BUILD SUCCESSFUL (total time: 0 seconds)
+
+====================================<<------>>======================================================================
+
+package rekursif;
+
+/**
+ *
+ * @author user
+ */
+public class rekursif {
+public static int deret(int n,int h){
+        if(n>0)
+            return(deret(n-1,h+n));
+        else
+            return(h);
+    }
+    public static int deret1(int a,int b,int n,int h){
+        if(n>0)
+            return(deret1(a,b,n-1,h+a+(n-1)*b));
+        else
+            return(h);
+    }
+        
+    public static int fak(int n,int h){
+        if(n>0)
+            return(fak(n-1,h*n));
+        else
+            return(h);
+    }
+    public static int pangkat(int a,int n,int h){
+        if(n>0)
+            return(pangkat(a,n-1,h*a));
+        else
+            return(h);
+    }
+    public static int fibo(int n){
+        if(n>2)
+            return(fibo(n-1)+fibo(n-2));
+        else
+            return(1);
+    }
+    public static int GCD(int a,int b){
+        
+        if(b!=0) return GCD(b,a%b);
+        else return (a);
+            
+    }
+    public static void main(String[] args) {
+        System.out.println(deret(3,0));
+        System.out.println(deret1(2,3,5,0));
+        System.out.println(fak(4,1));
+        System.out.println(pangkat(5,3,1));
+        System.out.println(fibo(5));
+        System.out.println(GCD(45,10));
+        System.out.println(GCD(10,45));
+    }   
+}
+================================================<<Output>>========================================================
+run:
+6
+40
+24
+125
+5
+5
+5
+BUILD SUCCESSFUL (total time: 0 seconds)
+================================================<<------>>========================================================
