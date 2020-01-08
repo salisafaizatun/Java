@@ -1,0 +1,255 @@
+package komplek;
+
+/**
+ * Class bilangan komplek
+ *  
+ */
+public class Komplek {
+
+    double re,im;
+    Komplek(){
+        re=0;im=0;
+    }
+    Komplek(double x,double y){
+        re=x;im=y;
+    }
+    Komplek tambah(Komplek K){
+        Komplek K1;K1=new Komplek();
+        K1.re= re+K.re;
+        K1.im= im+K.im;
+        return K1;
+    }   
+    Komplek kurang(Komplek K){
+        Komplek K1;K1=new Komplek();
+        K1.re= re-K.re;
+        K1.im= im-K.im;
+        return K1;
+    } 
+    Komplek kali(Komplek K){
+        Komplek K1;K1=new Komplek();
+        K1.re= re*K.re-im*K.im;
+        K1.im= re*K.im+K.re*im;
+        return K1;
+    } 
+    Komplek bagi(Komplek K){
+        Komplek K1;K1=new Komplek();
+        K1.re= (re*K.re+im*K.im)/(K.re*K.re+K.im*K.im);
+        K1.im= (im*K.re-re*K.im)/(K.re*K.re+K.im*K.im);
+        return K1;
+    } 
+    String toStr(){
+        String T="(";
+        if (im==0)
+            T=T+re+")";
+        else 
+            if(im>0)
+                T=T+re+"+"+im+"i"+")";
+            else
+                T=T+re+"-"+(-im)+"i"+")";
+        return T;
+    }
+    
+    public static void main(String[] args) {
+        Komplek K1=new Komplek(2,-1);
+        Komplek K2=new Komplek(5,3);
+        System.out.println(K1.toStr()+" + "+K2.toStr()+"="+K1.tambah(K2).toStr());
+        System.out.println(K1.toStr()+" - "+K2.toStr()+"="+K1.kurang(K2).toStr());
+        System.out.println(K1.toStr()+" * "+K2.toStr()+"="+K1.kali(K2).toStr());
+        System.out.println(K1.toStr()+" / "+K2.toStr()+"="+K1.bagi(K2).toStr());
+    }
+    
+}
+===========================================<<    Output     >>===========================================
+run:
+(2.0-1.0i) + (5.0+3.0i)=(7.0+2.0i)
+(2.0-1.0i) - (5.0+3.0i)=(-3.0-4.0i)
+(2.0-1.0i) * (5.0+3.0i)=(13.0+1.0i)
+(2.0-1.0i) / (5.0+3.0i)=(0.20588235294117646-0.3235294117647059i)
+BUILD SUCCESSFUL (total time: 0 seconds)
+===========================================<<--------------->>===========================================
+
+
+package pecahan;
+
+public class Pecahan {
+  int bulat,pembilang,penyebut;
+  
+  Pecahan(){
+      bulat=0;pembilang=0;penyebut=1;
+  }
+  Pecahan(int x){
+      bulat=x;pembilang=0;penyebut=1;
+  }
+   Pecahan(int x,int y){
+      bulat=0;pembilang=x;penyebut=y;
+  }
+   Pecahan(int x,int y,int z){
+      bulat=x;pembilang=y;penyebut=z;
+  }
+  int gcd (int x, int y){
+    if(y==0) return(x);
+    else return (gcd(y,x%y));
+  }
+  
+  void reduksi(){
+  int temp=gcd(pembilang,penyebut);
+  pembilang=pembilang/temp; penyebut=penyebut/temp;
+  if(pembilang>=penyebut){
+      bulat=pembilang/penyebut;
+      pembilang=pembilang %penyebut;
+  }
+  else bulat=0;
+    }
+  
+  Pecahan tambah(Pecahan X) {
+    Pecahan T = new Pecahan()  ;
+    T.bulat=0;
+    T.pembilang=(bulat*penyebut+pembilang)*X.penyebut + penyebut*(X.bulat*X.penyebut+X.pembilang);
+    T.penyebut=penyebut*X.penyebut;
+    T.reduksi();
+    return T;
+  }
+  Pecahan kurang(Pecahan X) {
+    Pecahan T = new Pecahan()  ;
+    T.bulat=0;
+    T.pembilang=(bulat*penyebut+pembilang)*(X.bulat*X.penyebut+X.pembilang);
+    T.penyebut=penyebut*X.penyebut;
+    T.reduksi();
+    return T;
+  }
+  Pecahan kali(Pecahan X) {
+    Pecahan T = new Pecahan()  ;
+    T.bulat=0;
+    T.pembilang=(bulat*penyebut+pembilang)*(X.bulat*X.penyebut+X.pembilang);
+    T.penyebut=penyebut*X.penyebut;
+    T.reduksi();
+    return T;
+  }
+ 
+   Pecahan bagi(Pecahan X) {
+    Pecahan T = new Pecahan()  ;
+    T.bulat=0;
+    T.pembilang=(bulat*penyebut+pembilang)*X.penyebut;
+    T.penyebut=penyebut*(X.bulat*X.penyebut+X.pembilang);
+    T.reduksi();
+    return T;
+  }
+  
+  String toStr(){
+      String T="";
+      if(penyebut ==1)
+          if(pembilang==0)
+              T=T+bulat;
+          else {
+              T=T+(bulat+pembilang);
+              pembilang=0;
+          }
+      else if(bulat==0)
+          T=T+pembilang+"/"+penyebut;
+          else
+      T=T+bulat+" "+pembilang+"/"+penyebut;
+      return (T);
+  }
+    public static void main(String[] args) {
+       Pecahan p=new Pecahan(2,4);
+       Pecahan p1=new Pecahan();
+       Pecahan p2=new Pecahan(2);
+       Pecahan p3=new Pecahan(5,2,3);
+      
+       System.out.println(p.toStr()+"+"+p3.toStr()+"="+p.tambah(p3).toStr());
+       p2=p2.tambah(p3.kali(p.bagi(p2)));
+       System.out.println(p2.toStr());
+       
+       
+    }
+    
+}
+===========================================<<    Output     >>==================================
+run:
+2/4+5 2/3=6 1/6
+3 5/12
+BUILD SUCCESSFUL (total time: 0 seconds)
+===========================================<<----------------->>================================
+package matriks;
+
+import java.util.Scanner;
+
+public class Matriks {
+    int row,col;
+    int[][] elm;
+    Matriks(int r,int c){
+        row=r;col=c;
+        elm=new int[row][col];
+        
+    }
+    boolean isEqOrdo(Matriks M){
+        if (row==M.row)
+            if(col==M.col) 
+                return true;
+            else 
+                return false;
+        else return false;
+    }
+    void Baca(){
+        Scanner baca = new Scanner(System.in);
+        for(int i=0;i<row;i++)
+            for(int j=0;j<col;j++){
+              System.out.print("elemen ("+i+","+j+")=");
+              elm[i][j]=baca.nextInt();
+                
+            }
+    }
+    
+     void Cetak(){
+        
+        for(int i=0;i<row;i++){
+            for(int j=0;j<col;j++)
+              System.out.print(elm[i][j]+"  "  );
+            System.out.println();
+            }
+    }
+    
+    Matriks tambah(Matriks M){
+        Matriks T = new Matriks(row,col);
+        for(int i=0;i<row;i++)
+            for(int j=0;j<col;j++)
+               T.elm[i][j]=elm[i][j]+M.elm[i][j];
+           
+       return T;
+    }
+    public static void main(String[] args) {
+     Matriks M =new Matriks(2,2);
+     Matriks N =new Matriks(2,2);
+     
+     if(M.isEqOrdo(N)){
+       Matriks P=new Matriks(2,2);
+       System.out.println("Baca Matriks Pertama:");
+       M.Baca();
+       System.out.println("Baca Matriks Kedua");
+       N.Baca();
+       P =M.tambah(N);
+       System.out.println("Cetak hasil penjumlahan:");
+       P.Cetak();
+     }
+       
+     
+    }
+    
+}
+===========================================<<    Output     >>===========================================
+run:
+Baca Matriks Pertama:
+elemen (0,0)=3
+elemen (0,1)=3
+elemen (1,0)=3
+elemen (1,1)=3
+Baca Matriks Kedua
+elemen (0,0)=2
+elemen (0,1)=2
+elemen (1,0)=2
+elemen (1,1)=2
+Cetak hasil penjumlahan:
+5  5  
+5  5  
+BUILD SUCCESSFUL (total time: 26 seconds)
+===========================================<<--------------->>===========================================
